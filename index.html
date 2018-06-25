@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giftastic : Get Gifs on demand</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="assets/js/gifs.js" async></script>
+</head>
+
+<body>
+    <div class="jumotron">
+        <div>
+
+        </div>
+    </div>
+    <!-- Tv shows search form -->
+    <div class="container">
+        <div>
+            <img src="assets/images/head_logo.jpg" id="head-img">
+        </div>
+        <br>
+        <form class="form-inline row justify-content-center">
+            <div class="form-group col-md-4">
+                    <input type="searchBox" class="form-control" id="tv-show-search" aria-describedby="searchHelp" placeholder="Enter TV Shows">
+            </div>
+            <button type="button" class="btn btn-warning col-md-4" id="add-to-watchlist">Add to Watchlist</button>
+          </form>
+        </div>
+    </div>
+    <br>
+<!-- Add tv shows label -->
+    <div class=" container">
+        <div class="row">
+            <div class="col-md-6 card bg-light ">
+                <h5 class="card-header">Watchlist</h5>
+                <div class="card-body" id="watch-list">
+                </div>
+            </div>
+            <div class="col-md-6 card bg-light">
+                <h5 class="card-header">Favourites</h5>
+                <div class="card-body" id="favs">
+                </div>
+            </div>
+        </div>   
+    </div>
+    <br>
+<!-- TV Shows Details -->
+    <div class="container fetch-shows">
+        <div class="row">
+            <div class="col-md-3 card  bg-secondary">
+                <img id="poster" class="card-img">
+                <div id="details">
+                    <ul class="list-group">
+                        <li class="list-group-item">Name : <span id="show-name"></span></li>
+                        <li class="list-group-item">Released : <span id="released"></span></li>
+                        <li class="list-group-item">Genre : <span id="genre"></span></li>
+                        <li class="list-group-item">Ratings : <span id="ratings"></span></li>
+                    </ul>
+                </div>
+                <br>
+                <div id="summary"></div>
+                <br>
+                <div>
+                    <button class="btn btn-primary" id="add-to-fav"> Add to Favourite</button>
+                </div>
+            </div>
+            <div class="col-md-9 card bg-dark text-white">
+                <h5> Gifs for TV-Show </h5>
+                <div id="load-more">
+                    <button class="btn btn-outline-secondary loader">Load More</button>
+                </div>
+                <div id="gifs" class="card-body" style="display:inline-block"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
