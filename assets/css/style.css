@@ -14,7 +14,9 @@ body{
     width: 100%;
     height: 150px;
 }
-
+.tv-show, .fav-show{
+    margin:2.5px;
+}
 .overlay{
     position: absolute;
     bottom: 160px;
